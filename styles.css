@@ -1,5 +1,4 @@
-
-/* Basic Reset */
+/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
@@ -18,53 +17,86 @@ body {
 
 h1, h2, h3 {
     font-family: 'Helvetica', sans-serif;
-    color: #1e3a8a;
+    color: #1a4dbd; /* Blue tone from the inspiration */
 }
 
-a {
-    text-decoration: none;
-    color: #1e3a8a;
-}
-
-/* Header */
-header {
-    background-color: #2d6cdf;
-    color: white;
-    padding: 30px 0;
+/* Navigation Bar */
+nav {
+    background-color: #1a4dbd;
+    padding: 15px;
     text-align: center;
 }
 
-header h1 {
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #0077cc;
+}
+
+/* Hero Section with Video Background */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1.2rem;
+.hero p {
+    font-size: 1.5rem;
 }
 
-/* Video Section */
-#video-section {
-    text-align: center;
-    margin-top: 20px;
+.button {
+    background-color: #0077cc;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
-video {
-    max-width: 100%;
-    border-radius: 10px;
+.button:hover {
+    background-color: #004fa7;
 }
 
 /* Mission Section */
 #mission {
-    background-color: #e3f2fd;
+    background-color: #eff2f8;
     padding: 40px;
-    margin: 40px 0;
-    border-radius: 10px;
+    text-align: center;
 }
 
 #mission h2 {
-    font-size: 2rem;
-    color: #1e3a8a;
+    font-size: 2.5rem;
+    color: #1a4dbd;
 }
 
 #mission p {
@@ -74,89 +106,56 @@ video {
 
 /* Features Section */
 #features {
-    padding: 40px;
+    padding: 60px 20px;
     background-color: white;
-    margin-bottom: 40px;
+    text-align: center;
 }
 
 #features h2 {
     font-size: 2.2rem;
-    color: #1e3a8a;
+    color: #1a4dbd;
     margin-bottom: 20px;
 }
 
 #features ul {
     list-style-type: none;
+    padding-left: 0;
 }
 
 #features li {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
     line-height: 1.8;
 }
 
-/* Call to Action Section */
-#cta {
-    background-color: #4caf50;
-    color: white;
-    padding: 40px;
+/* Project Overview Section */
+#overview {
+    background-color: #f7f9fc;
+    padding: 50px;
     text-align: center;
-    border-radius: 10px;
 }
 
-#cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-#cta p {
-    font-size: 1.2rem;
+#overview h2 {
+    font-size: 2.4rem;
+    color: #1a4dbd;
     margin-bottom: 30px;
 }
 
-#cta .button {
-    background-color: #2d6cdf;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+#overview ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-#cta .button:hover {
-    background-color: #1e3a8a;
-}
-
-/* Content Section */
-#content {
-    padding: 40px;
-    background-color: #f7f9fb;
-}
-
-#content h2 {
-    font-size: 2.2rem;
-    color: #1e3a8a;
-    margin-bottom: 20px;
-}
-
-/* Image Gallery */
-#images .image-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-#images img {
-    max-width: 32%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+#overview li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #2d6cdf;
+    background-color: #1a4dbd;
     color: white;
     margin-top: 40px;
 }
@@ -164,32 +163,4 @@ footer {
 footer p {
     font-size: 1rem;
     color: #fff;
-}
-
-footer a {
-    color: white;
-    font-weight: bold;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    #features ul {
-        padding-left: 20px;
-    }
-
-    #images .image-gallery {
-        flex-direction: column;
-    }
-
-    #images img {
-        max-width: 100%;
-    }
 }
